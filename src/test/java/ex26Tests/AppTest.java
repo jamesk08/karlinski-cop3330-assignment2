@@ -1,8 +1,13 @@
-package org.example;
+/*
+ *  UCF COP3330 Fall 2021 Assignment 2 Solution
+ *  Copyright 2021 James Karlinski
+ */
 
-import static org.junit.Assert.assertTrue;
+package ex26Tests;
 
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
