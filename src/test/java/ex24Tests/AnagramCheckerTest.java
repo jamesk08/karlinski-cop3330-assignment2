@@ -25,6 +25,13 @@ public class AnagramCheckerTest
     }
 
     @Test
+    public void isAnagram_shouldReturnFalse()
+    {
+        boolean isAnagram = anagramChecker.isAnagram("zzzz", "yyyy");
+        assert(!isAnagram);
+    }
+
+    @Test
     public void decideFinalMessageShouldReturnPositiveMessage()
     {
         String fakeFirstInput = "note";
