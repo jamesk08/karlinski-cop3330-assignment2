@@ -5,18 +5,44 @@
 
 package ex24;
 
+import java.text.MessageFormat;
+import java.util.Scanner;
+
 public class App
 {
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args)
     {
         AnagramChecker anagramChecker = new AnagramChecker();
-        String firstInput = anagramChecker.getInput("Enter the first string: ");
-        String secondInput = anagramChecker.getInput("Enter the second string: ");
-        String finalMessage = anagramChecker.decideFinalMessage(firstInput, secondInput);
-        out(finalMessage);
+        String firstInput = getInput("Enter the first string: ");
+        String secondInput = getInput("Enter the second string: ");
+        boolean isAnagram = anagramChecker.isAnagram(firstInput, secondInput);
+        String message = buildMessage(isAnagram, firstInput, secondInput);
+        output(message);
     }
 
-    private static void out(String message)
+    public static String getInput(String message)
+    {
+        System.out.print(message);
+        String inputString = scanner.nextLine();
+        if(inputString == null || inputString.isEmpty())
+        {
+            System.out.println("Invalid input");
+            System.exit(0);
+        }
+        return inputString;
+    }
+
+    public static String buildMessage(boolean isAnagram, String firstInput, String secondInput)
+    {
+        String decisionMessage = isAnagram ? "are anagrams" : "are not anagrams";
+        return MessageFormat.format(
+            "\"{0}\" and \"{1}\" {2}.", firstInput, secondInput, decisionMessage
+        );
+    }
+
+    private static void output(String message)
     {
         System.out.print(message);
     }
