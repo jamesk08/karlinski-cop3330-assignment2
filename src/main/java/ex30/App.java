@@ -7,8 +7,15 @@ package ex30;
 
 public class App
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
+        MultiplicationTableBuilder multiplicationTableBuilder = new MultiplicationTableBuilder();
+        String multiplicationTable = multiplicationTableBuilder.buildMultiplicationTable();
+        output(multiplicationTable);
+    }
 
+    private static void output(String message)
+    {
+        System.out.print(message);
     }
 }
