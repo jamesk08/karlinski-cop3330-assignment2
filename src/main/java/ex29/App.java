@@ -5,10 +5,16 @@
 
 package ex29;
 
+import java.text.MessageFormat;
+
 public class App
 {
     public static void main( String[] args )
     {
-
+        RoiCalculator roiCalculator = new RoiCalculator();
+        int returnRate = roiCalculator.getInput();
+        int yearsToDouble = roiCalculator.getNumberOfYearsToDouble(returnRate);
+        String message = MessageFormat.format("It will take {0} years to double your initial investment.", yearsToDouble);
+        roiCalculator.output(message);
     }
 }
