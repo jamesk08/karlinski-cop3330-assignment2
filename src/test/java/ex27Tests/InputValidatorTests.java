@@ -9,7 +9,7 @@ import ex27.InputValidator;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
-public class AppTest 
+public class InputValidatorTests
 {
     @Test
     public void validateInput_shouldHaveNoErrors()
