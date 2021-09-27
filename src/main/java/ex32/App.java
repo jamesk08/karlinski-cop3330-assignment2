@@ -7,8 +7,10 @@ package ex32;
 
 public class App
 {
-    public static void main( String[] args )
+    public static void main(String... args)
     {
-
+        NumberGuessing numberGuessing = new NumberGuessing();
+        numberGuessing.output("Let's play Guess the Number!\n");
+        numberGuessing.play();
     }
 }
