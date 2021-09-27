@@ -3,7 +3,6 @@
  *  Copyright 2021 James Karlinski
  */
 
-
 package ex33;
 
 import java.util.Random;
