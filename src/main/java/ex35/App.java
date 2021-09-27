@@ -7,8 +7,11 @@ package ex35;
 
 public class App
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
-
+        WinnerPicker winnerPicker = new WinnerPicker();
+        winnerPicker.getContestantNameInputs();
+        winnerPicker.getWinner();
+        winnerPicker.outputWinner();
     }
 }
