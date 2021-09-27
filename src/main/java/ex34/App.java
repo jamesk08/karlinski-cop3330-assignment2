@@ -9,6 +9,10 @@ public class App
 {
     public static void main( String[] args )
     {
-
+        EmployeeHandler employeeHandler = new EmployeeHandler();
+        employeeHandler.displayEmployees(employeeHandler.employees);
+        String employeeToRemove = employeeHandler.getEmployeeNameToRemove();
+        employeeHandler.removeEmployee(employeeToRemove);
+        employeeHandler.displayEmployees(employeeHandler.employees);
     }
 }
