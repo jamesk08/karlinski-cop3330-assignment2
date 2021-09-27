@@ -7,7 +7,6 @@ package ex30Tests;
 
 import ex30.MultiplicationTableBuilder;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class MultiplicationTableBuilderTest
