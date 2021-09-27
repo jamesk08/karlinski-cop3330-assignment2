@@ -15,7 +15,7 @@ public class StatisticsComputer
     static Scanner scanner = new Scanner(System.in);
     public ArrayList<Double> usersNumbers = new ArrayList<>();
 
-    public void displayEnteredNumbers()
+    public String displayEnteredNumbers()
     {
         String numbersDisplayText = "Numbers: ";
         for (int i = 0; i < usersNumbers.size(); i++)
@@ -27,7 +27,7 @@ public class StatisticsComputer
             boolean isLastItem = (i != usersNumbers.size() - 1);
             numbersDisplayText += isLastItem ? ", " : "\n";
         }
-        output(numbersDisplayText);
+        return numbersDisplayText;
     }
 
     public double calculateStandardDeviation()

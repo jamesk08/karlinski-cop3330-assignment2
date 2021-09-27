@@ -12,7 +12,8 @@ public class App
         StatisticsComputer statisticsComputer = new StatisticsComputer();
 
         statisticsComputer.setAllUserInputs();
-        statisticsComputer.displayEnteredNumbers();
+        String enteredNumbersMessage = statisticsComputer.displayEnteredNumbers();
+        statisticsComputer.output(enteredNumbersMessage);
 
         double average = statisticsComputer.calculateAverage();
         double minimum = statisticsComputer.findMinimum();
