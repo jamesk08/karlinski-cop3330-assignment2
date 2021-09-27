@@ -9,6 +9,16 @@ public class App
 {
     public static void main( String[] args )
     {
+        StatisticsComputer statisticsComputer = new StatisticsComputer();
 
+        statisticsComputer.setAllUserInputs();
+        statisticsComputer.displayEnteredNumbers();
+
+        double average = statisticsComputer.calculateAverage();
+        double minimum = statisticsComputer.findMinimum();
+        double maximum = statisticsComputer.findMaximum();
+        double standardDeviation = statisticsComputer.calculateStandardDeviation();
+
+        statisticsComputer.displayResults(average, minimum, maximum, standardDeviation);
     }
 }
