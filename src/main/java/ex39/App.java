@@ -7,8 +7,16 @@ package ex39;
 
 public class App
 {
-    public static void main( String[] args )
+    public static void main(String[] args)
     {
+        EmployeeRecordsManager employeeRecordsManager = new EmployeeRecordsManager();
 
+        employeeRecordsManager.output("\nBefore sorting: ");
+        employeeRecordsManager.displayEmployees();
+
+        employeeRecordsManager.sortEmployeeRecords();
+
+        employeeRecordsManager.output("\nAfter sorting: ");
+        employeeRecordsManager.displayEmployees();
     }
 }
